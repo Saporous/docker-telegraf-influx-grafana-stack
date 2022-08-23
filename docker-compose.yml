@@ -28,11 +28,11 @@ services:
     links:
       - influxdb
     ports:
-      - '127.0.0.1:3000:3000'
+      - '127.0.0.1:3001:3001'
     volumes:
       - grafana_data:/var/lib/grafana
-      - ./grafana/provisioning/:/etc/grafana/provisioning/
-      - ./grafana/dashboards/:/var/lib/grafana/dashboards/
+      - /home/administrator/docker/telegraf-influxdb-grafana/grafana/provisioning:/etc/grafana/provisioning/
+      - /home/administrator/docker/telegraf-influxdb-grafana/grafana/dashboards/:/var/lib/grafana/dashboards/
 
 volumes:
   grafana_data: {}
